@@ -32,9 +32,9 @@
         }
 
         .container {
-            max-width: 1200px; /* FIXED: Changed from 70% to pixel-based */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem; /* FIXED: Reduced from 2.4rem */
+            padding: 0 2rem;
             width: 100%;
         }
 
@@ -51,7 +51,7 @@
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            padding: 1rem 0; /* FIXED: Reduced padding */
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -70,7 +70,7 @@
         }
 
         .logo {
-            font-size: clamp(1.3rem, 4vw, 1.8rem); /* FIXED: Responsive font size */
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
@@ -82,7 +82,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem; /* FIXED: Reduced from 3rem */
+            gap: 3rem;
         }
 
         .nav-links a {
@@ -91,7 +91,7 @@
             transition: all 0.3s;
             font-weight: 500;
             position: relative;
-            font-size: 0.95rem; /* FIXED: Added explicit size */
+            font-size: 1rem;
         }
 
         .nav-links a::after {
@@ -130,8 +130,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px; /* FIXED: Reduced from 96px */
-            padding-bottom: 2rem;
+            padding-top: 96px;
         }
 
         .hero::before {
@@ -166,19 +165,19 @@
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem; /* FIXED: Reduced from 4.8rem */
+            gap: 4.8rem;
             align-items: center;
             position: relative;
             z-index: 1;
         }
 
         .hero-text h1 {
-            font-size: clamp(2rem, 6vw, 4.2rem); /* FIXED: Responsive sizing */
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
+            font-size: clamp(2.2rem, 6vw, 4.2rem);
+            margin-bottom: 1.98rem; 
             line-height: 1.1;
             font-weight: 800;
-            letter-spacing: -2px;
-            min-height: auto; /* FIXED: Removed fixed height */
+            letter-spacing: -2.4px;
+            min-height: auto;
         }
 
         .hero-text .highlight {
@@ -196,10 +195,10 @@
         .typing-text::after {
             content: '';
             display: inline-block;
-            width: 3px; /* FIXED: Reduced from 3.6px */
+            width: 3.6px;
             height: 1em;
             background-color: var(--primary);
-            margin-left: 4px; /* FIXED: Reduced */
+            margin-left: 6px;
             vertical-align: baseline;
             animation: blink 0.7s infinite;
         }
@@ -215,39 +214,39 @@
         }
 
         .hero-text p {
-            font-size: clamp(1rem, 3vw, 1.56rem); /* FIXED: Responsive sizing */
+            font-size: clamp(1.1rem, 3vw, 1.56rem);
             color: var(--gray-light);
-            margin-bottom: 2rem; /* FIXED: Reduced */
+            margin-bottom: 3rem;
             line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem; /* FIXED: Reduced */
-            flex-wrap: wrap; /* FIXED: Added wrap */
+            gap: 1.2rem;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 0.9rem 2rem; /* FIXED: Reduced padding */
-            border-radius: 12px; /* FIXED: Reduced */
+            padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 3rem);
+            border-radius: 14.4px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
             display: inline-block;
             border: none;
             cursor: pointer;
-            font-size: clamp(0.95rem, 2.5vw, 1.2rem); /* FIXED: Responsive */
+            font-size: clamp(1rem, 2vw, 1.2rem);
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: #fff;
-            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 9.6px 38.4px rgba(139, 92, 246, 0.3);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px); /* FIXED: Reduced */
-            box-shadow: 0 12px 45px rgba(139, 92, 246, 0.4); /* FIXED: Reduced */
+            transform: translateY(-3.6px);
+            box-shadow: 0 14.4px 57.6px rgba(139, 92, 246, 0.4);
         }
 
         .btn-secondary {
@@ -269,20 +268,20 @@
         }
 
         .profile-card {
-            width: 100%; /* FIXED: Changed from fixed 480px */
-            max-width: 480px; /* FIXED: Added max-width */
-            height: 500px; /* FIXED: Reduced from 600px */
+            width: 100%;
+            max-width: 480px;
+            height: 600px;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
-            border-radius: 30px; /* FIXED: Reduced */
-            padding: 2rem; /* FIXED: Reduced */
+            border-radius: 36px;
+            padding: 2.4rem;
             position: relative;
             backdrop-filter: blur(24px);
             border: 1px solid var(--border);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); /* FIXED: Reduced */
+            box-shadow: 0 24px 72px rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: clamp(6rem, 15vw, 12rem); /* FIXED: Responsive */
+            font-size: clamp(8rem, 15vw, 12rem);
             overflow: hidden;
         }
 
@@ -304,25 +303,25 @@
 
         /* Section Styles */
         section {
-            padding: 80px 0; /* FIXED: Reduced from 120px */
+            padding: 120px 0;
             position: relative;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem; /* FIXED: Reduced */
+            margin-bottom: 4.8rem;
         }
 
         .section-title h2 {
-            font-size: clamp(2rem, 5vw, 3.6rem); /* FIXED: Responsive */
-            margin-bottom: 1rem; /* FIXED: Reduced */
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            margin-bottom: 1.2rem;
             font-weight: 800;
             letter-spacing: -1.2px;
         }
 
         .section-title p {
             color: var(--gray-light);
-            font-size: clamp(1rem, 2.5vw, 1.44rem); /* FIXED: Responsive */
+            font-size: clamp(1.1rem, 2.5vw, 1.44rem);
         }
 
         #skills {
@@ -333,13 +332,13 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem; /* FIXED: Reduced */
+            gap: 1.8rem;
         }
 
         .skill-category {
             background: var(--dark-card);
-            padding: 2rem; /* FIXED: Reduced from 3rem */
-            border-radius: 20px; /* FIXED: Reduced */
+            padding: 3rem;
+            border-radius: 24px;
             transition: all 0.3s;
             border: 1px solid var(--border);
             position: relative;
@@ -352,7 +351,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px; /* FIXED: Reduced */
+            height: 4.8px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             transform: scaleX(0);
             transform-origin: left;
@@ -362,7 +361,7 @@
         .skill-category:hover {
             transform: translateY(-6px);
             border-color: var(--primary);
-            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2); /* FIXED: Reduced */
+            box-shadow: 0 24px 72px rgba(139, 92, 246, 0.2);
         }
 
         .skill-category:hover::before {
@@ -371,22 +370,22 @@
 
         .skill-category h3 {
             color: #fff;
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
-            font-size: clamp(1.3rem, 3vw, 1.8rem); /* FIXED: Responsive */
+            margin-bottom: 1.8rem;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
             font-weight: 700;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem; /* FIXED: Reduced */
+            gap: 0.96rem;
         }
 
         .skill-tag {
             background: rgba(255, 255, 255, 0.05);
-            padding: 0.6rem 1.2rem; /* FIXED: Reduced */
-            border-radius: 12px; /* FIXED: Reduced */
-            font-size: clamp(0.9rem, 2vw, 1.08rem); /* FIXED: Responsive */
+            padding: 0.72rem 1.44rem;
+            border-radius: 14.4px;
+            font-size: clamp(0.95rem, 2vw, 1.08rem);
             color: var(--gray-light);
             border: 1px solid var(--border);
             transition: all 0.3s;
@@ -396,7 +395,7 @@
             background: rgba(139, 92, 246, 0.2);
             border-color: var(--primary);
             color: #fff;
-            transform: translateY(-2px); /* FIXED: Reduced */
+            transform: translateY(-2.4px);
         }
 
         /* Projects Section with Carousel */
@@ -407,7 +406,7 @@
             position: relative;
             display: flex;
             align-items: center;
-            gap: 2rem; /* FIXED: Reduced */
+            gap: 2.6rem;
         }
 
         .projects-carousel-container {
@@ -418,25 +417,25 @@
 
         .projects-grid {
             display: flex;
-            gap: 1.5rem; /* FIXED: Reduced from 2.4rem */
+            gap: 2.4rem;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             will-change: transform;
-            padding-bottom: 2rem; /* FIXED: Reduced */
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
-            padding-left: 2rem; /* FIXED: Reduced */
-            margin-right: 2rem; /* FIXED: Reduced */
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.3rem;
+            padding-left: 3rem;
+            margin-right: 3rem;
         }
 
         .project-card {
             background: var(--dark-card);
-            margin-top: 1rem; /* FIXED: Reduced */
-            border-radius: 20px; /* FIXED: Reduced */
+            margin-top: 1.2rem;
+            border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--border);
             transition: all 0.3s;
             position: relative;
-            flex: 0 0 calc((100% - 3rem) / 3); /* FIXED: Updated calculation */
-            max-width: calc((100% - 3rem) / 3);
+            flex: 0 0 calc((100% - 4.8rem) / 3);
+            max-width: calc((100% - 4.8rem) / 3);
         }
 
         .project-card::before {
@@ -445,7 +444,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px; /* FIXED: Reduced */
+            height: 4.8px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             transform: scaleX(0);
             transform-origin: left;
@@ -454,9 +453,9 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px); /* FIXED: Reduced */
+            transform: translateY(-12px);
             border-color: var(--primary);
-            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 24px 72px rgba(139, 92, 246, 0.3);
         }
 
         .project-card:hover::before {
@@ -465,12 +464,12 @@
 
         .project-image {
             width: 100%;
-            height: 180px; /* FIXED: Reduced from 188px */
+            height: 188px;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(6, 182, 212, 0.3));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: clamp(3rem, 8vw, 4.8rem); /* FIXED: Responsive */
+            font-size: clamp(3.5rem, 8vw, 4.8rem);
             position: relative;
             overflow: hidden;
         }
@@ -489,43 +488,43 @@
         }
 
         .project-content {
-            padding: 1.8rem; /* FIXED: Reduced from 2.4rem */
+            padding: 2.4rem;
         }
 
         .project-content h3 {
-            margin-bottom: 0.8rem; /* FIXED: Reduced */
+            margin-bottom: 0.96rem;
             color: #fff;
-            font-size: clamp(1.2rem, 3vw, 1.8rem); /* FIXED: Responsive */
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
             font-weight: 700;
         }
 
         .project-content p {
             color: var(--gray-light);
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
+            margin-bottom: 1.8rem;
             line-height: 1.7;
-            font-size: clamp(0.9rem, 2vw, 1rem); /* FIXED: Responsive */
+            font-size: clamp(0.95rem, 2vw, 1.08rem);
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem; /* FIXED: Reduced */
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
+            gap: 0.72rem;
+            margin-bottom: 1.8rem;
         }
 
         .project-tag {
             background: rgba(139, 92, 246, 0.1);
-            padding: 0.4rem 1rem; /* FIXED: Reduced */
-            border-radius: 10px; /* FIXED: Reduced */
-            font-size: clamp(0.85rem, 2vw, 1.02rem); /* FIXED: Responsive */
+            padding: 0.48rem 1.2rem;
+            border-radius: 12px;
+            font-size: clamp(0.9rem, 2vw, 1.02rem);
             color: var(--primary-light);
             border: 1px solid rgba(139, 92, 246, 0.3);
         }
 
         .project-links {
             display: flex;
-            gap: 1.5rem; /* FIXED: Reduced */
-            flex-wrap: wrap; /* FIXED: Added */
+            gap: 1.8rem;
+            flex-wrap: wrap;
         }
 
         .project-links a {
@@ -535,25 +534,25 @@
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 0.3rem; /* FIXED: Reduced */
-            font-size: clamp(0.9rem, 2vw, 1rem); /* FIXED: Responsive */
+            gap: 0.36rem;
+            font-size: clamp(0.95rem, 2vw, 1.08rem);
         }
 
         .project-links a:hover {
             color: #fff;
-            transform: translateX(3px); /* FIXED: Reduced */
+            transform: translateX(3.6px);
         }
 
         /* Carousel Navigation Buttons */
         .carousel-btn {
-            width: 56px; /* FIXED: Reduced from 60px */
-            height: 56px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             padding-bottom: 0.3rem;
             background: var(--dark-card);
             border: 2px solid var(--border);
             color: var(--gray-light);
-            font-size: 1.8rem; /* FIXED: Reduced */
+            font-size: 2rem;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
@@ -570,7 +569,7 @@
             border-color: var(--primary);
             color: #fff;
             transform: scale(1.1);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4); /* FIXED: Reduced */
+            box-shadow: 0 12px 36px rgba(139, 92, 246, 0.4);
         }
 
         .carousel-btn:active {
@@ -581,19 +580,19 @@
         .carousel-indicators {
             display: flex;
             justify-content: center;
-            gap: 0.8rem; /* FIXED: Reduced */
-            margin-top: 2rem; /* FIXED: Reduced */
+            gap: 0.96rem;
+            margin-top: 3.6rem;
         }
 
         .carousel-indicator {
-            width: 10px; /* FIXED: Reduced */
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.2);
             border: 2px solid var(--border);
             cursor: pointer;
             transition: all 0.3s;
-            margin-top: -2rem; /* FIXED: Reduced */
+            margin-top: -3rem;
         }
 
         .carousel-indicator:hover {
@@ -604,8 +603,8 @@
         .carousel-indicator.active {
             background: var(--primary);
             border-color: var(--primary);
-            width: 32px; /* FIXED: Reduced */
-            border-radius: 5px;
+            width: 36px;
+            border-radius: 6px;
         }
 
         /* Hobbies Section */
@@ -615,16 +614,16 @@
 
         .hobbies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* FIXED: Reduced min */
-            gap: 1.5rem; /* FIXED: Reduced */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.4rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .hobby-card {
             background: var(--dark-card);
-            padding: 2rem; /* FIXED: Reduced from 3rem */
-            border-radius: 20px; /* FIXED: Reduced */
+            padding: 3rem;
+            border-radius: 24px;
             border: 1px solid var(--border);
             transition: all 0.3s;
             text-align: center;
@@ -638,7 +637,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px; /* FIXED: Reduced */
+            height: 4.8px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             transform: scaleX(0);
             transform-origin: left;
@@ -646,9 +645,9 @@
         }
 
         .hobby-card:hover {
-            transform: translateY(-10px); /* FIXED: Reduced */
+            transform: translateY(-12px);
             border-color: var(--primary);
-            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 24px 72px rgba(139, 92, 246, 0.3);
         }
 
         .hobby-card:hover::before {
@@ -656,9 +655,9 @@
         }
 
         .hobby-icon {
-            width: 90px; /* FIXED: Reduced from 100px */
-            height: 90px;
-            margin: 0 auto 1.5rem; /* FIXED: Reduced */
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.8rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border);
             border-radius: 50%;
@@ -674,20 +673,20 @@
             border-color: var(--primary);
             color: #fff;
             transform: scale(1.1);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4); /* FIXED: Reduced */
+            box-shadow: 0 12px 36px rgba(139, 92, 246, 0.4);
         }
 
         .hobby-card h3 {
             color: #fff;
-            font-size: clamp(1.3rem, 3vw, 1.8rem); /* FIXED: Responsive */
-            margin-bottom: 1rem; /* FIXED: Reduced */
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            margin-bottom: 1.2rem;
             font-weight: 700;
         }
 
         .hobby-card p {
             color: var(--gray-light);
             line-height: 1.7;
-            font-size: clamp(0.95rem, 2vw, 1.08rem); /* FIXED: Responsive */
+            font-size: clamp(1rem, 2vw, 1.08rem);
         }
 
         /* Contact Section */
@@ -698,45 +697,45 @@
 
         .contact-info-card {
             background: var(--dark-card);
-            padding: 3rem; /* FIXED: Reduced from 4.8rem */
-            border-radius: 24px; /* FIXED: Reduced */
+            padding: 4.8rem;
+            border-radius: 30px;
             border: 1px solid var(--border);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 24px 72px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
         .contact-info-header {
-            margin-bottom: 2rem; /* FIXED: Reduced */
+            margin-bottom: 2.4rem;
         }
 
         .contact-info-header h3 {
-            font-size: clamp(1.5rem, 4vw, 2.4rem); /* FIXED: Responsive */
-            margin-bottom: 1rem; /* FIXED: Reduced */
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 1.2rem;
             color: #fff;
             font-weight: 700;
         }
 
         .contact-info-header p {
             color: var(--gray-light);
-            font-size: clamp(1rem, 2.5vw, 1.2rem); /* FIXED: Responsive */
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             line-height: 1.8;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .contact-details-list {
-            margin-bottom: 3rem; /* FIXED: Reduced */
+            margin-bottom: 4.8rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1.5rem; /* FIXED: Reduced from 2.4rem */
+            padding: 2.4rem;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
-            border-radius: 16px; /* FIXED: Reduced */
-            margin-bottom: 1.5rem; /* FIXED: Reduced */
+            border-radius: 18px;
+            margin-bottom: 1.8rem;
             transition: all 0.3s;
         }
 
@@ -749,21 +748,21 @@
         .contact-item-left {
             display: flex;
             align-items: center;
-            gap: 1.5rem; /* FIXED: Reduced */
+            gap: 1.8rem;
             flex: 1;
             text-align: left;
         }
 
         .contact-item-icon {
-            width: 70px; /* FIXED: Reduced from 80px */
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border);
-            border-radius: 18px; /* FIXED: Reduced */
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5em; /* FIXED: Reduced */
+            font-size: 3em;
             flex-shrink: 0;
             color: var(--gray-light);
             transition: all 0.3s;
@@ -773,7 +772,7 @@
             background: var(--primary);
             border-color: var(--primary);
             color: #fff;
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 12px 36px rgba(139, 92, 246, 0.3);
         }
 
         .contact-item-info {
@@ -781,9 +780,9 @@
         }
 
         .contact-item-label {
-            font-size: clamp(0.8rem, 2vw, 0.96rem); /* FIXED: Responsive */
+            font-size: clamp(0.85rem, 2vw, 0.96rem);
             color: var(--gray);
-            margin-bottom: 0.3rem; /* FIXED: Reduced */
+            margin-bottom: 0.4rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
@@ -792,28 +791,28 @@
         .contact-item-value {
             color: #fff;
             font-weight: 500;
-            font-size: clamp(1rem, 2.5vw, 1.32rem); /* FIXED: Responsive */
-            word-break: break-word; /* FIXED: Added for long emails */
+            font-size: clamp(1.1rem, 2.5vw, 1.32rem);
+            word-break: break-word;
         }
 
         .contact-item-actions {
             display: flex;
-            gap: 1rem; /* FIXED: Reduced */
+            gap: 1.2rem;
         }
 
         .contact-action-btn {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border);
             color: var(--gray-light);
-            width: 44px; /* FIXED: Reduced from 48px */
-            height: 44px;
-            border-radius: 10px; /* FIXED: Reduced */
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 1.1rem; /* FIXED: Reduced */
+            font-size: 1.2rem;
             text-decoration: none;
         }
 
@@ -825,35 +824,35 @@
         }
 
         .social-section {
-            margin-bottom: 3rem; /* FIXED: Reduced */
+            margin-bottom: 3.6rem;
         }
 
         .social-section h4 {
-            font-size: clamp(1.2rem, 3vw, 1.56rem); /* FIXED: Responsive */
+            font-size: clamp(1.3rem, 3vw, 1.56rem);
             color: #fff;
-            margin-bottom: 1rem; /* FIXED: Reduced */
+            margin-bottom: 1.2rem;
             font-weight: 600;
         }
 
         .social-links-grid {
-            padding-bottom: 3rem; /* FIXED: Reduced */
+            padding-bottom: 3.6rem;
             display: flex;
-            gap: 1.5rem; /* FIXED: Reduced */
+            gap: 1.8rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .social-links-grid a {
-            width: 90px; /* FIXED: Reduced from 100px */
-            height: 90px;
+            width: 100px;
+            height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border);
-            border-radius: 24px; /* FIXED: Reduced */
+            border-radius: 30px;
             color: var(--gray-light);
-            font-size: 2.5rem; /* FIXED: Reduced */
+            font-size: 3rem;
             transition: all 0.3s;
             text-decoration: none;
         }
@@ -863,7 +862,7 @@
             border-color: var(--primary);
             color: #fff;
             transform: translateY(-6px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); /* FIXED: Reduced */
+            box-shadow: 0 12px 36px rgba(139, 92, 246, 0.3);
         }
 
         .resume-section {
@@ -873,44 +872,44 @@
             width: 100%;
             max-width: 400px;
             margin: 0 auto;
-            padding: 1.5rem 3rem; /* FIXED: Reduced */
+            padding: 1.8rem 3.6rem;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: #fff;
             border: none;
-            border-radius: 16px; /* FIXED: Reduced */
+            border-radius: 18px;
             font-weight: 600;
-            font-size: clamp(1.1rem, 2.5vw, 1.32rem); /* FIXED: Responsive */
+            font-size: clamp(1.1rem, 2.5vw, 1.32rem);
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem; /* FIXED: Reduced */
-            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4); /* FIXED: Reduced */
+            gap: 1.2rem;
+            box-shadow: 0 12px 48px rgba(139, 92, 246, 0.4);
         }
 
         .resume-download:hover {
-            transform: translateY(-5px); /* FIXED: Reduced */
-            box-shadow: 0 15px 50px rgba(139, 92, 246, 0.5); /* FIXED: Reduced */
+            transform: translateY(-6px);
+            box-shadow: 0 18px 60px rgba(139, 92, 246, 0.5);
         }
 
         /* Toast Notification */
         .toast {
             position: fixed;
-            bottom: 2rem; /* FIXED: Reduced */
-            right: 2rem;
+            bottom: 2.4rem;
+            right: 2.4rem;
             background: var(--dark-card);
             border: 1px solid var(--primary);
-            padding: 1rem 2rem; /* FIXED: Reduced */
-            border-radius: 10px; /* FIXED: Reduced */
+            padding: 1.2rem 2.4rem;
+            border-radius: 12px;
             color: #fff;
             font-weight: 500;
-            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4); /* FIXED: Reduced */
+            box-shadow: 0 12px 48px rgba(139, 92, 246, 0.4);
             transform: translateY(120%);
             opacity: 0;
             transition: all 0.3s;
             z-index: 2000;
-            font-size: 0.95rem; /* FIXED: Added */
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .toast.show {
@@ -923,21 +922,21 @@
             background: var(--dark-card);
             border-top: 1px solid var(--border);
             text-align: center;
-            padding: 2.5rem 0; /* FIXED: Reduced */
+            padding: 3rem 0;
             color: var(--gray);
         }
 
         /* Responsive */
         @media (max-width: 1400px) {
             .project-card {
-                flex: 0 0 calc((100% - 1.5rem) / 2);
-                max-width: calc((100% - 1.5rem) / 2);
+                flex: 0 0 calc((100% - 2.4rem) / 2);
+                max-width: calc((100% - 2.4rem) / 2);
             }
         }
 
         @media (max-width: 921px) {
             .container {
-                padding: 0 1.5rem; /* FIXED: Reduced padding */
+                padding: 0 1.5rem;
             }
 
             .menu-toggle {
@@ -953,9 +952,9 @@
                 background: rgba(10, 10, 10, 0.98);
                 backdrop-filter: blur(24px);
                 flex-direction: column;
-                padding: 1.5rem; /* FIXED: Reduced */
+                padding: 2rem;
                 border-bottom: 1px solid var(--border);
-                gap: 0.5rem; /* FIXED: Reduced gap */
+                gap: 1rem;
             }
 
             .nav-links.active {
@@ -963,23 +962,37 @@
             }
 
             .nav-links a {
-                font-size: 1.1rem; /* FIXED: Larger for touch */
-                padding: 0.5rem 0; /* FIXED: Added padding */
+                font-size: 1.1rem;
+                padding: 0.5rem 0;
             }
 
             .hero {
-                padding-top: 70px; /* FIXED: Reduced */
-                min-height: auto; /* FIXED: Auto height */
+                padding-top: 110px; /* INCREASED from 80px to 110px */
+                min-height: auto;
+                padding-bottom: 3rem;
             }
 
             .hero-content {
                 grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "image"
+                    "text";
                 text-align: center;
-                gap: 2.5rem; /* FIXED: Reduced */
+                gap: 3rem;
+            }
+
+            .hero-image {
+                grid-area: image;
+                order: -1;
+            }
+
+            .hero-text {
+                grid-area: text;
             }
 
             .hero-text h1 {
-                font-size: clamp(2rem, 8vw, 3rem); /* FIXED: Better mobile scaling */
+                font-size: clamp(2rem, 8vw, 3rem);
+                letter-spacing: -1.5px;
             }
 
             .cta-buttons {
@@ -989,22 +1002,27 @@
 
             .profile-card {
                 width: 100%;
-                max-width: 380px; /* FIXED: Reduced for mobile */
-                height: 400px; /* FIXED: Reduced */
+                max-width: 380px;
+                height: 420px;
+                margin: 0 auto;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
+            .skill-category {
+                padding: 2rem;
+            }
+
             .projects-carousel-wrapper {
-                gap: 1rem; /* FIXED: Reduced */
+                gap: 1.5rem;
             }
             
             .carousel-btn {
-                width: 44px; /* FIXED: Reduced */
-                height: 44px;
-                font-size: 1.4rem; /* FIXED: Reduced */
+                width: 48px;
+                height: 48px;
+                font-size: 1.5rem;
             }
             
             .project-card {
@@ -1013,30 +1031,34 @@
             }
 
             .projects-grid {
-                padding-left: 0.5rem; /* FIXED: Reduced */
-                margin-right: 0.5rem;
+                padding-left: 1rem;
+                margin-right: 1rem;
             }
 
             .hobbies-grid {
                 grid-template-columns: 1fr;
             }
 
+            .hobby-card {
+                padding: 2rem;
+            }
+
             .section-title h2 {
-                font-size: clamp(1.8rem, 6vw, 2.4rem); /* FIXED: Better scaling */
+                font-size: clamp(2rem, 6vw, 2.8rem);
             }
 
             section {
-                padding: 60px 0; /* FIXED: Reduced */
+                padding: 80px 0;
             }
 
             .contact-info-card {
-                padding: 2rem; /* FIXED: Reduced */
+                padding: 2.5rem;
             }
 
             .contact-item {
                 flex-direction: column;
-                gap: 1.2rem; /* FIXED: Reduced */
-                padding: 1.2rem; /* FIXED: Reduced */
+                gap: 1.5rem;
+                padding: 1.8rem;
             }
 
             .contact-item-left {
@@ -1045,73 +1067,81 @@
             }
 
             .social-links-grid a {
-                width: 80px; /* FIXED: Reduced */
+                width: 80px;
                 height: 80px;
-                font-size: 2.2rem; /* FIXED: Reduced */
+                font-size: 2.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 0 1rem; /* FIXED: Further reduced */
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding-top: 100px; /* ALSO increased for very small screens */
             }
 
             .carousel-btn {
-                width: 36px; /* FIXED: Smaller buttons */
-                height: 36px;
+                width: 40px;
+                height: 40px;
                 font-size: 1.2rem;
             }
 
             .projects-carousel-wrapper {
-                gap: 0.5rem; /* FIXED: Minimal gap */
+                gap: 0.8rem;
             }
 
             .btn {
-                padding: 0.8rem 1.5rem; /* FIXED: Smaller buttons */
-                font-size: 0.95rem;
-            }
-
-            .skill-category {
-                padding: 1.5rem; /* FIXED: Reduced */
-            }
-
-            .hobby-card {
-                padding: 1.5rem; /* FIXED: Reduced */
-            }
-
-            .hobby-icon {
-                width: 70px; /* FIXED: Smaller */
-                height: 70px;
-            }
-
-            .contact-item-icon {
-                width: 60px; /* FIXED: Smaller */
-                height: 60px;
-                font-size: 2em;
-            }
-
-            .contact-action-btn {
-                width: 40px; /* FIXED: Smaller */
-                height: 40px;
+                padding: 0.9rem 2rem;
                 font-size: 1rem;
             }
 
+            .skill-category {
+                padding: 1.5rem;
+            }
+
+            .hobby-card {
+                padding: 1.8rem;
+            }
+
+            .hobby-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .contact-item-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2.5em;
+            }
+
+            .contact-action-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+            }
+
             .social-links-grid a {
-                width: 70px; /* FIXED: Smaller */
+                width: 70px;
                 height: 70px;
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .toast {
-                bottom: 1rem; /* FIXED: Reduced */
+                bottom: 1rem;
                 right: 1rem;
-                left: 1rem; /* FIXED: Full width on small screens */
-                font-size: 0.9rem;
+                left: 1rem;
+                padding: 1rem 1.5rem;
             }
 
             .profile-card {
-                max-width: 320px; /* FIXED: Smaller on very small screens */
+                max-width: 300px;
                 height: 350px;
+            }
+
+            .contact-info-card {
+                padding: 1.8rem;
             }
         }
     </style>
