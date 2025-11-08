@@ -985,10 +985,9 @@
             }
 
             .skill-category.revealed::before {
-                transform: scaleX(1);
-                -webkit-transform: scaleX(1);
-                animation: gradientSlide 1s ease-out;
-                -webkit-animation: gradientSlide 1s ease-out;
+                animation: gradientSlide 1s ease-out forwards;
+                -webkit-animation: gradientSlide 1s ease-out forwards;
+                transition: none;
             }
 
             @keyframes gradientSlide {
@@ -1010,10 +1009,9 @@
             }
 
             .project-card.revealed::before {
-                transform: scaleX(1);
-                -webkit-transform: scaleX(1);
-                animation: gradientSlide 1s ease-out;
-                -webkit-animation: gradientSlide 1s ease-out;
+                animation: gradientSlide 1s ease-out forwards;
+                -webkit-animation: gradientSlide 1s ease-out forwards;
+                transition: none;
             }
 
             .project-card.revealed .project-image::before {
@@ -1038,10 +1036,9 @@
             }
 
             .hobby-card.revealed::before {
-                transform: scaleX(1);
-                -webkit-transform: scaleX(1);
-                animation: gradientSlide 1s ease-out;
-                -webkit-animation: gradientSlide 1s ease-out;
+                animation: gradientSlide 1s ease-out forwards;
+                -webkit-animation: gradientSlide 1s ease-out forwards;
+                transition: none;
             }
 
             .hobby-card.revealed .hobby-icon {
