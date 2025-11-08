@@ -957,7 +957,7 @@
             .social-links-grid a {
                 opacity: 0;
                 transform: translateY(30px);
-                transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             /* Revealed state with hover effects */
@@ -971,8 +971,8 @@
             .skill-category.revealed::before {
                 transform: scaleX(1);
                 -webkit-transform: scaleX(1);
-                animation: gradientSlide 0.6s ease-out;
-                -webkit-animation: gradientSlide 0.6s ease-out;
+                animation: gradientSlide 1s ease-out;
+                -webkit-animation: gradientSlide 1s ease-out;
             }
 
             @keyframes gradientSlide {
@@ -996,13 +996,13 @@
             .project-card.revealed::before {
                 transform: scaleX(1);
                 -webkit-transform: scaleX(1);
-                animation: gradientSlide 0.6s ease-out;
-                -webkit-animation: gradientSlide 0.6s ease-out;
+                animation: gradientSlide 1s ease-out;
+                -webkit-animation: gradientSlide 1s ease-out;
             }
 
             .project-card.revealed .project-image::before {
-                animation: shimmer 1.5s ease-out;
-                -webkit-animation: shimmer 1.5s ease-out;
+                animation: shimmer 1s ease-out;
+                -webkit-animation: shimmer 1s ease-out;
             }
 
             @keyframes shimmer {
@@ -1024,8 +1024,8 @@
             .hobby-card.revealed::before {
                 transform: scaleX(1);
                 -webkit-transform: scaleX(1);
-                animation: gradientSlide 0.6s ease-out;
-                -webkit-animation: gradientSlide 0.6s ease-out;
+                animation: gradientSlide 1s ease-out;
+                -webkit-animation: gradientSlide 1s ease-out;
             }
 
             .hobby-card.revealed .hobby-icon {
@@ -1034,8 +1034,8 @@
                 color: #fff;
                 transform: scale(1.1);
                 box-shadow: 0 12px 36px rgba(139, 92, 246, 0.4);
-                animation: iconPulse 0.6s ease-out;
-                -webkit-animation: iconPulse 0.6s ease-out;
+                animation: iconPulse 1s ease-out;
+                -webkit-animation: iconPulse 1s ease-out;
             }
 
             @keyframes iconPulse {
@@ -1073,28 +1073,28 @@
             /* Stagger animations - first two items get same delay */
             .skill-category:nth-child(1) { transition-delay: 0.1s; }
             .skill-category:nth-child(2) { transition-delay: 0.1s; }
-            .skill-category:nth-child(3) { transition-delay: 0.2s; }
-            .skill-category:nth-child(4) { transition-delay: 0.3s; }
+            .skill-category:nth-child(3) { transition-delay: 0.1s; }
+            .skill-category:nth-child(4) { transition-delay: 0.1s; }
 
             .hobby-card:nth-child(1) { transition-delay: 0.1s; }
             .hobby-card:nth-child(2) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(3) { transition-delay: 0.2s; }
-            .hobby-card:nth-child(4) { transition-delay: 0.3s; }
-            .hobby-card:nth-child(5) { transition-delay: 0.4s; }
-            .hobby-card:nth-child(6) { transition-delay: 0.5s; }
+            .hobby-card:nth-child(3) { transition-delay: 0.1s; }
+            .hobby-card:nth-child(4) { transition-delay: 0.1s; }
+            .hobby-card:nth-child(5) { transition-delay: 0.1s; }
+            .hobby-card:nth-child(6) { transition-delay: 0.1s; }
 
             .contact-item:nth-child(1) { transition-delay: 0.1s; }
             .contact-item:nth-child(2) { transition-delay: 0.1s; }
-            .contact-item:nth-child(3) { transition-delay: 0.2s; }
+            .contact-item:nth-child(3) { transition-delay: 0.1s; }
 
             .social-links-grid a:nth-child(1) { transition-delay: 0.1s; }
             .social-links-grid a:nth-child(2) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(3) { transition-delay: 0.2s; }
-            .social-links-grid a:nth-child(4) { transition-delay: 0.3s; }
+            .social-links-grid a:nth-child(3) { transition-delay: 0.1s; }
+            .social-links-grid a:nth-child(4) { transition-delay: 0.1s; }
 
             /* Skill tags animation on reveal */
             .skill-category.revealed .skill-tag {
-                animation: tagFloat 0.1s ease-out forwards;
+                animation: tagFloat 1s ease-out forwards;
                 opacity: 0;
             }
 
@@ -1922,13 +1922,13 @@
             // Options for first two items trigger
             const sectionOptions = {
                 threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                rootMargin: '0px 0px -20px 0px'
             };
 
             // Options for remaining items (individual reveal)
             const remainingOptions = {
-                threshold: 0.2,
-                rootMargin: '0px 0px -80px 0px'
+                threshold: 0.1,
+                rootMargin: '0px 0px -20px 0px'
             };
 
             // Observer for triggering first two items together
