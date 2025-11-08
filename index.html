@@ -352,9 +352,13 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: #8b5cf6;
+            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
+            -webkit-transform: scaleX(0);
             transform-origin: left;
+            -webkit-transform-origin: left;
             transition: transform 0.3s;
         }
 
@@ -366,6 +370,7 @@
 
         .skill-category:hover::before {
             transform: scaleX(1);
+            -webkit-transform: scaleX(1);
         }
 
         .skill-category h3 {
@@ -447,9 +452,13 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: #8b5cf6;
+            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
+            -webkit-transform: scaleX(0);
             transform-origin: left;
+            -webkit-transform-origin: left;
             transition: transform 0.3s;
             z-index: 1;
         }
@@ -462,6 +471,7 @@
 
         .project-card:hover::before {
             transform: scaleX(1);
+            -webkit-transform: scaleX(1);
         }
 
         .project-image {
@@ -644,9 +654,13 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: #8b5cf6;
+            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
+            -webkit-transform: scaleX(0);
             transform-origin: left;
+            -webkit-transform-origin: left;
             transition: transform 0.3s;
         }
 
@@ -658,6 +672,7 @@
 
         .hobby-card:hover::before {
             transform: scaleX(1);
+            -webkit-transform: scaleX(1);
         }
 
         .hobby-icon {
@@ -955,15 +970,19 @@
 
             .skill-category.revealed::before {
                 transform: scaleX(1);
+                -webkit-transform: scaleX(1);
                 animation: gradientSlide 0.6s ease-out;
+                -webkit-animation: gradientSlide 0.6s ease-out;
             }
 
             @keyframes gradientSlide {
                 from {
                     transform: scaleX(0);
+                    -webkit-transform: scaleX(0);
                 }
                 to {
                     transform: scaleX(1);
+                    -webkit-transform: scaleX(1);
                 }
             }
 
@@ -976,11 +995,14 @@
 
             .project-card.revealed::before {
                 transform: scaleX(1);
+                -webkit-transform: scaleX(1);
                 animation: gradientSlide 0.6s ease-out;
+                -webkit-animation: gradientSlide 0.6s ease-out;
             }
 
             .project-card.revealed .project-image::before {
                 animation: shimmer 1.5s ease-out;
+                -webkit-animation: shimmer 1.5s ease-out;
             }
 
             @keyframes shimmer {
@@ -1001,7 +1023,9 @@
 
             .hobby-card.revealed::before {
                 transform: scaleX(1);
+                -webkit-transform: scaleX(1);
                 animation: gradientSlide 0.6s ease-out;
+                -webkit-animation: gradientSlide 0.6s ease-out;
             }
 
             .hobby-card.revealed .hobby-icon {
@@ -1011,6 +1035,7 @@
                 transform: scale(1.1);
                 box-shadow: 0 12px 36px rgba(139, 92, 246, 0.4);
                 animation: iconPulse 0.6s ease-out;
+                -webkit-animation: iconPulse 0.6s ease-out;
             }
 
             @keyframes iconPulse {
@@ -1045,27 +1070,27 @@
                 box-shadow: 0 12px 36px rgba(139, 92, 246, 0.3);
             }
 
-            /* Stagger animations */
+            /* Stagger animations - first two items get same delay */
             .skill-category:nth-child(1) { transition-delay: 0.1s; }
             .skill-category:nth-child(2) { transition-delay: 0.1s; }
-            .skill-category:nth-child(3) { transition-delay: 0.1s; }
-            .skill-category:nth-child(4) { transition-delay: 0.1s; }
+            .skill-category:nth-child(3) { transition-delay: 0.2s; }
+            .skill-category:nth-child(4) { transition-delay: 0.3s; }
 
             .hobby-card:nth-child(1) { transition-delay: 0.1s; }
             .hobby-card:nth-child(2) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(3) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(4) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(5) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(6) { transition-delay: 0.1s; }
+            .hobby-card:nth-child(3) { transition-delay: 0.2s; }
+            .hobby-card:nth-child(4) { transition-delay: 0.3s; }
+            .hobby-card:nth-child(5) { transition-delay: 0.4s; }
+            .hobby-card:nth-child(6) { transition-delay: 0.5s; }
 
             .contact-item:nth-child(1) { transition-delay: 0.1s; }
             .contact-item:nth-child(2) { transition-delay: 0.1s; }
-            .contact-item:nth-child(3) { transition-delay: 0.1s; }
+            .contact-item:nth-child(3) { transition-delay: 0.2s; }
 
             .social-links-grid a:nth-child(1) { transition-delay: 0.1s; }
             .social-links-grid a:nth-child(2) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(3) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(4) { transition-delay: 0.1s; }
+            .social-links-grid a:nth-child(3) { transition-delay: 0.2s; }
+            .social-links-grid a:nth-child(4) { transition-delay: 0.3s; }
 
             /* Skill tags animation on reveal */
             .skill-category.revealed .skill-tag {
@@ -1894,24 +1919,56 @@
             // Only run on mobile
             if (window.innerWidth > 921) return;
 
-            const observerOptions = {
-                threshold: 0.15,
-                rootMargin: '0px 0px -100px 0px'
+            // Options for first two items trigger
+            const sectionOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             };
 
-            const observer = new IntersectionObserver((entries) => {
+            // Options for remaining items (individual reveal)
+            const remainingOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -80px 0px'
+            };
+
+            // Observer for triggering first two items together
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const items = entry.target.querySelectorAll('.reveal-on-scroll');
+                        // Reveal first two items together
+                        if (items.length >= 1) items[0].classList.add('revealed');
+                        if (items.length >= 2) items[1].classList.add('revealed');
+                        
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, sectionOptions);
+
+            // Observer for remaining items (3+)
+            const remainingObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('revealed');
-                        // Optional: stop observing after reveal
-                        // observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, remainingOptions);
 
-            // Observe all elements with reveal-on-scroll class
-            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-                observer.observe(el);
+            // Observe each section
+            document.querySelectorAll('section').forEach(section => {
+                const items = section.querySelectorAll('.reveal-on-scroll');
+                
+                if (items.length > 0) {
+                    // Observe the section to trigger first two items
+                    sectionObserver.observe(section);
+                    
+                    // Observe items starting from the 3rd one individually
+                    items.forEach((item, index) => {
+                        if (index >= 2) {
+                            remainingObserver.observe(item);
+                        }
+                    });
+                }
             });
         }
 
