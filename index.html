@@ -59,6 +59,22 @@
             border-bottom: 1px solid var(--border);
         }
 
+
+        /* Fix iOS auto-detected phone numbers */
+        a[href^="tel:"] {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Specific fix for contact item values */
+        .contact-item-value a,
+        .contact-item-value a:link,
+        .contact-item-value a:visited,
+        .contact-item-value a:hover,
+        .contact-item-value a:active {
+            color: #fff !important;
+            text-decoration: none !important;
+        }
         .noselect {
             cursor: default;
         }
