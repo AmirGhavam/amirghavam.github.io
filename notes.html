@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes - Amir Ghavam</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Amir Ghavam</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="index.html#hobbies">Hobbies</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="notes-hero">
+        <div class="container">
+            <!-- <a href="index.html" class="back-link">← Back to Home</a> -->
+            <h1><span class="highlight">My Notes & Resources</span></h1>
+            <p>A curated collection of my cheat sheets, summaries, original problems, and learning resources across multiple disciplines—from Computer Science to Data Science, Mathematics to Psychology.</p>
+        </div>
+    </section>
+
+    <section id="notes-section">
+        <div class="container">
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" onclick="filterNotes('all')">All Notes</button>
+                    <button class="filter-btn" onclick="filterNotes('cs')">Computer Science</button>
+                    <button class="filter-btn" onclick="filterNotes('datascience')">Data Science</button>
+                    <button class="filter-btn" onclick="filterNotes('math')">Mathematics</button>
+                    <button class="filter-btn" onclick="filterNotes('psychology')">Psychology</button>
+                    <button class="filter-btn" onclick="filterNotes('health')">Health</button>
+                    <button class="filter-btn" onclick="filterNotes('english')">English</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search notes..." onkeyup="searchNotes()">
+                </div>
+            </div>
+
+            <!-- Notes Grid -->
+            <div class="notes-grid" id="notesGrid">
+                <!-- Notes will be dynamically inserted here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <h3>No notes found</h3>
+                <p>Try adjusting your filter or search criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Amir Ghavam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="notes.js"></script>
+</body>
+</html>
