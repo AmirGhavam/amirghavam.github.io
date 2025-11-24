@@ -38,7 +38,6 @@
             width: 100%;
         }
 
-        /* Glassmorphism utility */
         .glass {
             background: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(24px);
@@ -46,7 +45,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Header & Navigation */
         header {
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(24px);
@@ -59,14 +57,11 @@
             border-bottom: 1px solid var(--border);
         }
 
-
-        /* Fix iOS auto-detected phone numbers */
         a[href^="tel:"] {
             color: inherit;
             text-decoration: none;
         }
 
-        /* Specific fix for contact item values */
         .contact-item-value a,
         .contact-item-value a:link,
         .contact-item-value a:visited,
@@ -75,6 +70,7 @@
             color: #fff !important;
             text-decoration: none !important;
         }
+
         .noselect {
             cursor: default;
         }
@@ -139,7 +135,6 @@
             padding: 0.5rem;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -317,7 +312,6 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
 
-        /* Section Styles */
         section {
             padding: 120px 0;
             position: relative;
@@ -344,7 +338,6 @@
             background: var(--dark-lighter);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -368,13 +361,9 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: #8b5cf6;
-            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
             background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
-            -webkit-transform: scaleX(0);
             transform-origin: left;
-            -webkit-transform-origin: left;
             transition: transform 0.3s;
         }
 
@@ -386,7 +375,6 @@
 
         .skill-category:hover::before {
             transform: scaleX(1);
-            -webkit-transform: scaleX(1);
         }
 
         .skill-category h3 {
@@ -417,10 +405,6 @@
             border-color: var(--primary);
             color: #fff;
             transform: translateY(-2.4px);
-        }
-
-        /* Projects Section with Carousel */
-        #projects {
         }
 
         .projects-carousel-wrapper {
@@ -468,13 +452,9 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: #8b5cf6;
-            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
             background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
-            -webkit-transform: scaleX(0);
             transform-origin: left;
-            -webkit-transform-origin: left;
             transition: transform 0.3s;
             z-index: 1;
         }
@@ -487,7 +467,6 @@
 
         .project-card:hover::before {
             transform: scaleX(1);
-            -webkit-transform: scaleX(1);
         }
 
         .project-image {
@@ -575,7 +554,6 @@
             transform: translateX(3.6px);
         }
 
-        /* Carousel Navigation Buttons */
         .carousel-btn {
             width: 60px;
             height: 60px;
@@ -608,7 +586,6 @@
             transform: scale(0.95);
         }
 
-        /* Carousel Indicators */
         .carousel-indicators {
             display: flex;
             justify-content: center;
@@ -639,7 +616,6 @@
             border-radius: 6px;
         }
 
-        /* Hobbies Section */
         #hobbies {
             background: var(--dark-lighter);
         }
@@ -670,13 +646,9 @@
             left: 0;
             width: 100%;
             height: 4.8px;
-            background: #8b5cf6;
-            background: -webkit-linear-gradient(left, #8b5cf6, #06b6d4);
             background: linear-gradient(90deg, #8b5cf6, #06b6d4);
             transform: scaleX(0);
-            -webkit-transform: scaleX(0);
             transform-origin: left;
-            -webkit-transform-origin: left;
             transition: transform 0.3s;
         }
 
@@ -688,7 +660,6 @@
 
         .hobby-card:hover::before {
             transform: scaleX(1);
-            -webkit-transform: scaleX(1);
         }
 
         .hobby-icon {
@@ -726,7 +697,401 @@
             font-size: clamp(1rem, 2vw, 1.08rem);
         }
 
-        /* Contact Section */
+        /* ================= NOTES SECTION ================= */
+        #notes {
+            background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.08), transparent 55%),
+                        radial-gradient(circle at bottom right, rgba(6, 182, 212, 0.08), transparent 50%),
+                        var(--dark);
+        }
+
+        .notes-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            padding: 2.5rem 2.5rem 2.2rem;
+            max-width: 1050px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notes-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.17), transparent 55%);
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .notes-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            pointer-events: none;
+        }
+
+        .notes-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .notes-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .notes-header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .notes-header-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            background: radial-gradient(circle at 30% 10%, rgba(255,255,255,0.35), transparent 55%),
+                        linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.55);
+        }
+
+        .notes-header-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notes-header-title-main {
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            font-size: 1.02rem;
+            color: #e5e5ff;
+            font-family: "JetBrains Mono", "Fira Code", Menlo, monospace;
+        }
+
+        .notes-header-title-sub {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+        }
+
+        .notes-header-right {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .notes-chip {
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.12);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gray-light);
+            background: rgba(0,0,0,0.5);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .notes-depth-indicator {
+            width: 44px;
+            height: 24px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.14);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            color: #e5e5ff;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(6, 182, 212, 0.35));
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.45);
+        }
+
+        .notes-description {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.7rem;
+            max-width: 700px;
+        }
+
+        .notes-description strong {
+            color: #f9fafb;
+            font-weight: 500;
+        }
+
+        .notes-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .notes-tree-wrapper {
+            position: relative;
+            padding: 1.1rem 1rem 1.1rem 1.1rem;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(15,15,25,0.9), rgba(10,10,16,0.9));
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            overflow: hidden;
+        }
+
+        .notes-tree-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 0 0, rgba(148,163,184,0.25), transparent 55%);
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .notes-tree-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-family: "JetBrains Mono", "Fira Code", Menlo, monospace;
+            font-size: 0.82rem;
+            color: var(--gray-light);
+        }
+
+        .notes-tree-header-row-path {
+            opacity: 0.85;
+        }
+
+        .notes-tree-header-row-status {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .notes-tree-status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 10px rgba(34,197,94,0.8);
+        }
+
+        .notes-tree {
+            list-style: none;
+            margin-top: 0.4rem;
+            padding-left: 0;
+            font-family: "JetBrains Mono", "Fira Code", Menlo, monospace;
+            font-size: 0.86rem;
+            color: var(--gray-light);
+            position: relative;
+        }
+
+        .notes-node {
+            margin: 0.05rem 0;
+        }
+
+        .notes-node-main {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.13rem 0.4rem 0.13rem 0.3rem;
+            border-radius: 8px;
+            cursor: default;
+            transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+            position: relative;
+        }
+
+        .notes-node-main:hover {
+            background: rgba(148,163,184,0.10);
+            transform: translateX(1px);
+        }
+
+        .notes-node.folder > .notes-node-main {
+            cursor: pointer;
+        }
+
+        .notes-node.folder.expanded > .notes-node-main {
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.20), rgba(6, 182, 212, 0.20));
+            color: #e5e7ff;
+        }
+
+        .notes-toggle {
+            width: 16px;
+            height: 16px;
+            border-radius: 5px;
+            border: 1px solid rgba(148,163,184,0.45);
+            background: rgba(15,23,42,0.7);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: rgba(209,213,219,0.9);
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+            flex-shrink: 0;
+            transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+
+        .notes-node.folder.expanded > .notes-node-main .notes-toggle {
+            transform: rotate(90deg);
+            background: linear-gradient(135deg, rgba(129, 140, 248, 0.75), rgba(56, 189, 248, 0.75));
+            border-color: rgba(191,219,254,0.9);
+            color: #020617;
+        }
+
+        .notes-node-icon {
+            width: 17px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .notes-node.folder .notes-node-icon {
+            color: #facc15;
+        }
+
+        .notes-node.file .notes-node-icon {
+            color: #38bdf8;
+        }
+
+        .notes-node-label {
+            white-space: nowrap;
+        }
+
+        .notes-node-meta {
+            margin-left: auto;
+            font-size: 0.7rem;
+            color: rgba(148,163,184,0.85);
+            opacity: 0.82;
+        }
+
+        /* COLLAPSIBLE TREE: simple, robust max-height trick */
+        .notes-children {
+            margin-left: 1.2rem;
+            padding-left: 0.95rem;
+            margin-top: 0.08rem;
+            border-left: 1px dashed rgba(148,163,184,0.45);
+            list-style: none;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-2px);
+            transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .notes-node.folder.expanded > .notes-children {
+            max-height: 999px;   /* plenty for nested content */
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .notes-file-link {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            width: 100%;
+        }
+
+        .notes-file-link:hover {
+            color: #f9fafb;
+        }
+
+        .notes-file-extension {
+            opacity: 0.7;
+        }
+
+        .notes-side-panel {
+            border-radius: 18px;
+            border: 1px solid rgba(148,163,184,0.35);
+            background: radial-gradient(circle at 10% 0, rgba(248,250,252,0.05), transparent 60%),
+                        rgba(10,16,25,0.95);
+            padding: 1.15rem 1.2rem 1.05rem;
+            font-size: 0.86rem;
+            color: var(--gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notes-side-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid rgba(15,23,42,0.9);
+            pointer-events: none;
+        }
+
+        .notes-side-title {
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: rgba(203,213,225,0.95);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .notes-side-title span {
+            font-size: 0.9rem;
+        }
+
+        .notes-side-bullets {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0.85rem;
+        }
+
+        .notes-side-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .notes-side-bullet-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 999px;
+            background: rgba(148,163,184,0.9);
+            margin-top: 0.4rem;
+        }
+
+        .notes-github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 0.2rem;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .notes-github-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .notes-github-link:hover {
+            color: #fff;
+            transform: translateX(3px);
+        }
+
         .contact-wrapper {
             max-width: 800px;
             margin: 0 auto;
@@ -902,9 +1267,6 @@
             box-shadow: 0 12px 36px rgba(139, 92, 246, 0.3);
         }
 
-        .resume-section {
-        }
-
         .resume-download {
             width: 100%;
             max-width: 400px;
@@ -930,7 +1292,6 @@
             box-shadow: 0 18px 60px rgba(139, 92, 246, 0.5);
         }
 
-        /* Toast Notification */
         .toast {
             position: fixed;
             bottom: 2.4rem;
@@ -954,7 +1315,6 @@
             opacity: 1;
         }
 
-        /* Footer */
         footer {
             background: var(--dark-card);
             border-top: 1px solid var(--border);
@@ -963,20 +1323,18 @@
             color: var(--gray);
         }
 
-        /* ========== MOBILE SCROLL ANIMATIONS ========== */
         @media (max-width: 921px) {
-            /* Scroll reveal base state */
             .skill-category,
             .project-card,
             .hobby-card,
             .contact-item,
-            .social-links-grid a {
+            .social-links-grid a,
+            .notes-card {
                 opacity: 0;
                 transform: translateY(30px);
                 transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
-            /* Revealed state with hover effects */
             .skill-category.revealed {
                 opacity: 1;
                 transform: translateY(-6px);
@@ -986,19 +1344,12 @@
 
             .skill-category.revealed::before {
                 animation: gradientSlide 1s ease-out forwards;
-                -webkit-animation: gradientSlide 1s ease-out forwards;
                 transition: none;
             }
 
             @keyframes gradientSlide {
-                from {
-                    transform: scaleX(0);
-                    -webkit-transform: scaleX(0);
-                }
-                to {
-                    transform: scaleX(1);
-                    -webkit-transform: scaleX(1);
-                }
+                from { transform: scaleX(0); }
+                to   { transform: scaleX(1); }
             }
 
             .project-card.revealed {
@@ -1010,22 +1361,16 @@
 
             .project-card.revealed::before {
                 animation: gradientSlide 1s ease-out forwards;
-                -webkit-animation: gradientSlide 1s ease-out forwards;
                 transition: none;
             }
 
             .project-card.revealed .project-image::before {
                 animation: shimmer 1s ease-out;
-                -webkit-animation: shimmer 1s ease-out;
             }
 
             @keyframes shimmer {
-                0% {
-                    transform: translateX(-100%);
-                }
-                100% {
-                    transform: translateX(100%);
-                }
+                0%   { transform: translateX(-100%); }
+                100% { transform: translateX(100%);  }
             }
 
             .hobby-card.revealed {
@@ -1037,7 +1382,6 @@
 
             .hobby-card.revealed::before {
                 animation: gradientSlide 1s ease-out forwards;
-                -webkit-animation: gradientSlide 1s ease-out forwards;
                 transition: none;
             }
 
@@ -1048,16 +1392,11 @@
                 transform: scale(1.1);
                 box-shadow: 0 12px 36px rgba(139, 92, 246, 0.4);
                 animation: iconPulse 1s ease-out;
-                -webkit-animation: iconPulse 1s ease-out;
             }
 
             @keyframes iconPulse {
-                0%, 100% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(1.15);
-                }
+                0%, 100% { transform: scale(1);    }
+                50%      { transform: scale(1.15); }
             }
 
             .contact-item.revealed {
@@ -1083,56 +1422,56 @@
                 box-shadow: 0 12px 36px rgba(139, 92, 246, 0.3);
             }
 
-            /* Stagger animations - first two items get same delay */
-            .skill-category:nth-child(1) { transition-delay: 0.1s; }
-            .skill-category:nth-child(2) { transition-delay: 0.1s; }
-            .skill-category:nth-child(3) { transition-delay: 0.1s; }
-            .skill-category:nth-child(4) { transition-delay: 0.1s; }
+            .notes-card.revealed {
+                opacity: 1;
+                transform: translateY(-6px);
+                border-color: var(--primary);
+                box-shadow: 0 24px 72px rgba(139, 92, 246, 0.25);
+            }
 
-            .hobby-card:nth-child(1) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(2) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(3) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(4) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(5) { transition-delay: 0.1s; }
-            .hobby-card:nth-child(6) { transition-delay: 0.1s; }
+            .skill-category:nth-child(1),
+            .skill-category:nth-child(2),
+            .skill-category:nth-child(3),
+            .skill-category:nth-child(4),
+            .hobby-card:nth-child(1),
+            .hobby-card:nth-child(2),
+            .hobby-card:nth-child(3),
+            .hobby-card:nth-child(4),
+            .hobby-card:nth-child(5),
+            .hobby-card:nth-child(6),
+            .contact-item:nth-child(1),
+            .contact-item:nth-child(2),
+            .contact-item:nth-child(3),
+            .social-links-grid a:nth-child(1),
+            .social-links-grid a:nth-child(2),
+            .social-links-grid a:nth-child(3),
+            .social-links-grid a:nth-child(4),
+            .notes-card {
+                transition-delay: 0.1s;
+            }
 
-            .contact-item:nth-child(1) { transition-delay: 0.1s; }
-            .contact-item:nth-child(2) { transition-delay: 0.1s; }
-            .contact-item:nth-child(3) { transition-delay: 0.1s; }
-
-            .social-links-grid a:nth-child(1) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(2) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(3) { transition-delay: 0.1s; }
-            .social-links-grid a:nth-child(4) { transition-delay: 0.1s; }
-
-            /* Skill tags animation on reveal */
             .skill-category.revealed .skill-tag {
                 animation: tagFloat 1s ease-out forwards;
                 opacity: 0;
             }
 
             @keyframes tagFloat {
-                from {
-                    opacity: 0;
-                    transform: translateY(10px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+                from { opacity: 0; transform: translateY(10px); }
+                to   { opacity: 1; transform: translateY(0);    }
             }
 
-            .skill-category.revealed .skill-tag:nth-child(1) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(2) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(3) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(4) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(5) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(6) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(7) { animation-delay: 0.1s; }
-            .skill-category.revealed .skill-tag:nth-child(8) { animation-delay: 0.1s; }
+            .skill-category.revealed .skill-tag:nth-child(1),
+            .skill-category.revealed .skill-tag:nth-child(2),
+            .skill-category.revealed .skill-tag:nth-child(3),
+            .skill-category.revealed .skill-tag:nth-child(4),
+            .skill-category.revealed .skill-tag:nth-child(5),
+            .skill-category.revealed .skill-tag:nth-child(6),
+            .skill-category.revealed .skill-tag:nth-child(7),
+            .skill-category.revealed .skill-tag:nth-child(8) {
+                animation-delay: 0.1s;
+            }
         }
 
-        /* Responsive */
         @media (max-width: 1400px) {
             .project-card {
                 flex: 0 0 calc((100% - 2.4rem) / 2);
@@ -1225,7 +1564,22 @@
                 padding: 2rem;
             }
 
-            /* MOBILE PROJECTS - HORIZONTAL SCROLL */
+            .notes-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .notes-card {
+                padding: 2rem 1.7rem 1.8rem;
+            }
+
+            .notes-tree-wrapper {
+                order: 2;
+            }
+
+            .notes-side-panel {
+                order: 1;
+            }
+
             .projects-carousel-wrapper {
                 gap: 0;
                 display: block;
@@ -1338,6 +1692,10 @@
                 padding: 1.5rem;
             }
 
+            .notes-card {
+                padding: 1.7rem 1.3rem 1.6rem;
+            }
+
             .hobby-card {
                 padding: 1.8rem;
             }
@@ -1394,801 +1752,1462 @@
     </style>
 </head>
 <body class="noselect">
-    <header>
-        <nav class="container">
-            <div class="logo">Amir Ghavam</div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav class="container">
+        <div class="logo">Amir Ghavam</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>
-                        <span class="highlight typing-text" id="typingText"></span>
-                    </h1>
-                    <p>Data Scientist & Web Developer crafting intelligent solutions with data-driven insights and cutting-edge web technologies.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span class="highlight typing-text" id="typingText"></span>
+                </h1>
+                <p>Data Scientist & Web Developer crafting intelligent solutions with data-driven insights and cutting-edge web technologies.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-card">👨‍💻</div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">👨‍💻</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <div class="section-title">
+            <h2>Skills & Expertise</h2>
+            <p>Technologies and tools I'm familiar with</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category reveal-on-scroll">
+                <h3>Data Science & ML</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-category reveal-on-scroll">
+                <h3>Web Development</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+            <div class="skill-category reveal-on-scroll">
+                <h3>Data Visualization</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">Plotly</span>
+                    <span class="skill-tag">D3.js</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Power BI</span>
+                </div>
+            </div>
+            <div class="skill-category reveal-on-scroll">
+                <h3>Tools & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Jupyter</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Linux</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Skills & Expertise</h2>
-                <p>Technologies and tools I'm familiar with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category reveal-on-scroll">
-                    <h3>Data Science & ML</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal-on-scroll">
-                    <h3>Web Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal-on-scroll">
-                    <h3>Data Visualization</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Plotly</span>
-                        <span class="skill-tag">D3.js</span>
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Power BI</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal-on-scroll">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Jupyter</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Linux</span>
-                    </div>
-                </div>
-            </div>
+<section id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>Some of my recent work</p>
         </div>
-    </section>
 
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Projects</h2>
-                <p>Some of my recent work</p>
-            </div>
-            
-            <div class="projects-carousel-wrapper">
-                <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)" aria-label="Previous projects">
-                    ←
-                </button>
-                
-                <div class="projects-carousel-container">
-                    <div class="projects-grid" id="projectsCarousel">
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">📊</div>
-                            <div class="project-content">
-                                <h3>Predictive Analytics Dashboard</h3>
-                                <p>Machine learning model with interactive web dashboard for real-time predictions and data visualization.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Flask</span>
-                                    <span class="project-tag">React</span>
-                                    <span class="project-tag">ML</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+        <div class="projects-carousel-wrapper">
+            <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)" aria-label="Previous projects">
+                ←
+            </button>
+
+            <div class="projects-carousel-container">
+                <div class="projects-grid" id="projectsCarousel">
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">📊</div>
+                        <div class="project-content">
+                            <h3>Predictive Analytics Dashboard</h3>
+                            <p>Machine learning model with interactive web dashboard for real-time predictions and data visualization.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">ML</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
-                        
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">🤖</div>
-                            <div class="project-content">
-                                <h3>NLP Sentiment Analyzer</h3>
-                                <p>Deep learning model for sentiment analysis with web interface for processing text data.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">TensorFlow</span>
-                                    <span class="project-tag">NLP</span>
-                                    <span class="project-tag">JavaScript</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+                    </div>
+
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">🤖</div>
+                        <div class="project-content">
+                            <h3>NLP Sentiment Analyzer</h3>
+                            <p>Deep learning model for sentiment analysis with web interface for processing text data.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">TensorFlow</span>
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
-                        
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">🌐</div>
-                            <div class="project-content">
-                                <h3>Data Visualization Platform</h3>
-                                <p>Full-stack web application for creating interactive data visualizations and reports.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">React</span>
-                                    <span class="project-tag">D3.js</span>
-                                    <span class="project-tag">Node.js</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+                    </div>
+
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">🌐</div>
+                        <div class="project-content">
+                            <h3>Data Visualization Platform</h3>
+                            <p>Full-stack web application for creating interactive data visualizations and reports.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">D3.js</span>
+                                <span class="project-tag">Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
-                        
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">💼</div>
-                            <div class="project-content">
-                                <h3>E-Commerce Analytics</h3>
-                                <p>Customer behavior analysis system with recommendation engine and sales forecasting.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">Pandas</span>
-                                    <span class="project-tag">MySQL</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+                    </div>
+
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">💼</div>
+                        <div class="project-content">
+                            <h3>E-Commerce Analytics</h3>
+                            <p>Customer behavior analysis system with recommendation engine and sales forecasting.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Pandas</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
-                        
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">🔍</div>
-                            <div class="project-content">
-                                <h3>Image Recognition API</h3>
-                                <p>RESTful API for image classification using convolutional neural networks.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">PyTorch</span>
-                                    <span class="project-tag">FastAPI</span>
-                                    <span class="project-tag">Docker</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+                    </div>
+
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">🔍</div>
+                        <div class="project-content">
+                            <h3>Image Recognition API</h3>
+                            <p>RESTful API for image classification using convolutional neural networks.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
-                        
-                        <div class="project-card reveal-on-scroll">
-                            <div class="project-image">📈</div>
-                            <div class="project-content">
-                                <h3>Stock Market Predictor</h3>
-                                <p>Time series analysis and prediction model for stock price forecasting.</p>
-                                <div class="project-tags">
-                                    <span class="project-tag">Python</span>
-                                    <span class="project-tag">LSTM</span>
-                                    <span class="project-tag">Streamlit</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#">GitHub →</a>
-                                </div>
+                    </div>
+
+                    <div class="project-card reveal-on-scroll">
+                        <div class="project-image">📈</div>
+                        <div class="project-content">
+                            <h3>Stock Market Predictor</h3>
+                            <p>Time series analysis and prediction model for stock price forecasting.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">LSTM</span>
+                                <span class="project-tag">Streamlit</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">GitHub →</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)" aria-label="Next projects">
-                    →
-                </button>
             </div>
-            
-            <div class="carousel-indicators" id="carouselIndicators"></div>
+
+            <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)" aria-label="Next projects">
+                →
+            </button>
         </div>
-    </section>
 
-    <section id="hobbies">
-        <div class="container">
-            <div class="section-title">
-                <h2>Hobbies</h2>
-                <p>What I love to do in my free time</p>
-            </div>
-            <div class="hobbies-grid">
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-                        </svg>
-                    </div>
-                    <h3>Chess</h3>
-                    <p>Passionate about tech books, sci-fi novels, and staying updated with the latest research papers in AI and data science.</p>
-                </div>
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21.58 16.09l-1.09-7.66C20.21 6.46 18.52 5 16.53 5H7.47C5.48 5 3.79 6.46 3.51 8.43l-1.09 7.66C2.2 17.63 3.39 19 4.94 19h0c.68 0 1.32-.27 1.8-.75L9 16h6l2.25 2.25c.48.48 1.13.75 1.8.75h0c1.56 0 2.75-1.37 2.53-2.91zM11 11H9v2H8v-2H6v-1h2V8h1v2h2v1zm4-0.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
-                        </svg>
-                    </div>
-                    <h3>Gaming</h3>
-                    <p>Enjoy strategy,puzzles,racing, sport and shooting games, from Clash Royale and COC to COD and NFS and FIFA and so on.</p>
-                </div>
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/>
-                        </svg>
-                    </div>
-                    <h3>Fitness</h3>
-                    <p>Regular workouts, running, and yoga to maintain physical health and mental clarity for optimal productivity.</p>
-                </div>
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </div>
-                    <h3>Sudoku</h3>
-                    <p>Capturing moments and exploring creative composition, with a special interest in landscape and urban photography.</p>
-                </div>
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                        </svg>
-                    </div>
-                    <h3>Music</h3>
-                    <p>Listening to diverse genres and exploring music production, from rock and heavymetals to pops and classics!</p>
-                </div>
-                <div class="hobby-card reveal-on-scroll">
-                    <div class="hobby-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                        </svg>
-                    </div>
-                    <h3>Travel</h3>
-                    <p>Exploring new cultures, cuisines, and perspectives while discovering inspiration from different parts of the world.</p>
-                </div>
-            </div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+    </div>
+</section>
+
+<section id="notes">
+    <div class="container">
+        <div class="section-title">
+            <h2>Notes & Knowledge Base</h2>
+            <p>Deep, structured notes across math, CS, engineering, psychology, health and games</p>
         </div>
-    </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Let's collaborate on your next project</p>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info-card">
-                    <div class="contact-info-header">
-                        <h3>Contact Information</h3>
-                        <p>Feel free to reach out through any of these channels. I'm always open to discussing new projects and opportunities and even talking in General.</p>
+        <div class="notes-card reveal-on-scroll">
+            <div class="notes-card-inner">
+                <div class="notes-card-header">
+                    <div class="notes-header-left">
+                        <div class="notes-header-icon">📚</div>
+                        <div class="notes-header-title">
+                            <span class="notes-header-title-main">~/notes</span>
+                            <span class="notes-header-title-sub">A living, polyglot knowledge tree – synced with GitHub</span>
+                        </div>
+                    </div>
+                    <div class="notes-header-right">
+                        <div class="notes-chip">
+                            <span>Depth</span>
+                            <span class="notes-depth-indicator">4+</span>
+                        </div>
+                        <div class="notes-chip">
+                            <span>Multi-domain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="notes-description">
+                    This is a <strong>file-system style</strong> view of my personal notes: everything from
+                    <strong>math & algorithms</strong> to <strong>health, psychology</strong> and even
+                    <strong>games strategy</strong> (chess, sudoku, etc.). Each leaf links to the corresponding
+                    file or folder in the GitHub repository.
+                </p>
+
+                <div class="notes-layout">
+                    <!-- Tree -->
+                    <div class="notes-tree-wrapper">
+                        <div class="notes-tree-header-row">
+                            <div class="notes-tree-header-row-path">notes/</div>
+                            <div class="notes-tree-header-row-status">
+                                <span class="notes-tree-status-dot"></span>
+                                <span>local · synced</span>
+                            </div>
+                        </div>
+
+                        <ul class="notes-tree">
+                            <!-- MATH -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">math</span>
+                                    <span class="notes-node-meta">core/</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">linear-algebra</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">matrices</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node folder">
+                                                        <div class="notes-node-main" data-type="folder">
+                                                            <button class="notes-toggle" type="button">▶</button>
+                                                            <span class="notes-node-icon">📁</span>
+                                                            <span class="notes-node-label">decompositions</span>
+                                                        </div>
+                                                        <ul class="notes-children">
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">lu-factorization<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">qr-decomposition<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">svd-intuition<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">vector-spaces<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">calculus</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">single-variable</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">derivatives-basics<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">integration-techniques<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">multi-variable</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">gradients-and-hessians<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">probability-statistics</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">random-variables<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">bayesian-intro<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- CS & ENGINEERING -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">cs-engineering</span>
+                                    <span class="notes-node-meta">systems/</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">programming</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">python</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node folder">
+                                                        <div class="notes-node-main" data-type="folder">
+                                                            <button class="notes-toggle" type="button">▶</button>
+                                                            <span class="notes-node-icon">📁</span>
+                                                            <span class="notes-node-label">data-science</span>
+                                                        </div>
+                                                        <ul class="notes-children">
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">pandas-cheatsheet<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">numpy-snippets<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">python-tips-tricks<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">cpp</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">stl-notes<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">systems</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">operating-systems</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">processes-threads<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">scheduling-algorithms<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">networking</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node folder">
+                                                        <div class="notes-node-main" data-type="folder">
+                                                            <button class="notes-toggle" type="button">▶</button>
+                                                            <span class="notes-node-icon">📁</span>
+                                                            <span class="notes-node-label">protocols</span>
+                                                        </div>
+                                                        <ul class="notes-children">
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">tcp-ip<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="notes-node file">
+                                                                <div class="notes-node-main">
+                                                                    <span class="notes-node-icon">📄</span>
+                                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                                        <span class="notes-node-label">http-deep-dive<span class="notes-file-extension">.md</span></span>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- DATA SCIENCE & ML -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">data-science-ml</span>
+                                    <span class="notes-node-meta">models/</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">supervised</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">regression</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">linear-regression<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">regularization-l1-l2<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">classification-overview<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="notes-node file">
+                                        <div class="notes-node-main">
+                                            <span class="notes-node-icon">📄</span>
+                                            <a class="notes-file-link" href="#" target="_blank">
+                                                <span class="notes-node-label">ml-cheatsheet<span class="notes-file-extension">.md</span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- PSYCHOLOGY -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">psychology</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">cognitive</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">biases-and-heuristics<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">motivation</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">habit-design<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- HEALTH -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">health-lifestyle</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">training</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">full-body-program<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">nutrition</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">protein-basics<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">sleep-recovery</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">sleep-hygiene<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- GAMES -->
+                            <li class="notes-node folder">
+                                <div class="notes-node-main" data-type="folder">
+                                    <button class="notes-toggle" type="button">▶</button>
+                                    <span class="notes-node-icon">📁</span>
+                                    <span class="notes-node-label">games</span>
+                                    <span class="notes-node-meta">fun/</span>
+                                </div>
+                                <ul class="notes-children">
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">chess</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">openings</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">sicilian-defense-overview<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">tactics</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">tactical-motifs<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="notes-node folder">
+                                                <div class="notes-node-main" data-type="folder">
+                                                    <button class="notes-toggle" type="button">▶</button>
+                                                    <span class="notes-node-icon">📁</span>
+                                                    <span class="notes-node-label">endgames</span>
+                                                </div>
+                                                <ul class="notes-children">
+                                                    <li class="notes-node file">
+                                                        <div class="notes-node-main">
+                                                            <span class="notes-node-icon">📄</span>
+                                                            <a class="notes-file-link" href="#" target="_blank">
+                                                                <span class="notes-node-label">king-pawn-basics<span class="notes-file-extension">.md</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="notes-node folder">
+                                        <div class="notes-node-main" data-type="folder">
+                                            <button class="notes-toggle" type="button">▶</button>
+                                            <span class="notes-node-icon">📁</span>
+                                            <span class="notes-node-label">sudoku</span>
+                                        </div>
+                                        <ul class="notes-children">
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">beginner-strategies<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="notes-node file">
+                                                <div class="notes-node-main">
+                                                    <span class="notes-node-icon">📄</span>
+                                                    <a class="notes-file-link" href="#" target="_blank">
+                                                        <span class="notes-node-label">advanced-techniques<span class="notes-file-extension">.md</span></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- Social Links -->
-                    <div class="social-links-grid">
-                        <a href="https://github.com/AmirGhavam" target="_blank" title="GitHub" class="reveal-on-scroll">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    <!-- Side panel / description -->
+                    <aside class="notes-side-panel">
+
+                        <div class="notes-side-title">
+                            <span>HOW TO USE</span>
+                        </div>
+                        <ul class="notes-side-bullets">
+                            <li>
+                                <span class="notes-side-bullet-dot"></span>
+                                <span><strong>Click on folders</strong> to expand / collapse nested notes (one branch at a time).</span>
+                            </li>
+                            <li>
+                                <span class="notes-side-bullet-dot"></span>
+                                <span>Each <strong>file</strong> opens the corresponding markdown / document in the GitHub repo.</span>
+                            </li>
+                            <li>
+                                <span class="notes-side-bullet-dot"></span>
+                                <span>Structure mirrors a real <strong>file system</strong>, organized by domain and difficulty.</span>
+                            </li>
+                        </ul>
+
+                        <div class="notes-side-title" style="margin-top: 0.6rem;">
+                            <span>GITHUB REPO</span>
+                        </div>
+                        <p style="font-size: 0.86rem; margin-bottom: 0.4rem;">
+                            All notes are versioned and backed up on GitHub. You can browse folders,
+                            open files, or clone the entire knowledge base locally.
+                        </p>
+
+                        <a class="notes-github-link"
+                           href="https://github.com/AmirGhavam"
+                           target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.72.08-.72 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.21-.13-.3-.54-1.52.11-3.17 0 0 1.01-.32 3.31 1.23.96-.27 1.99-.4 3.01-.4s2.05.13 3.01.4c2.3-1.55 3.31-1.23 3.31-1.23.65 1.65.24 2.87.12 3.17.77.83 1.24 1.9 1.24 3.21 0 4.61-2.8 5.63-5.48 5.93.43.37.82 1.09.82 2.21v3.29c0 .32.19.7.8.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/>
                             </svg>
+                            <span>Open notes repository on GitHub</span> →
                         </a>
-                        <a href="https://linkedin.com/in/AmirGhavam" target="_blank" title="LinkedIn" class="reveal-on-scroll">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-                        <a href="https://twitter.com/AmirGhavam72" target="_blank" title="Twitter" class="reveal-on-scroll">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                            </svg>
-                        </a>
-                        <a href="https://instagram.com/AmirGhavam72" target="_blank" title="Instagram" class="reveal-on-scroll">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                    </div> 
 
-                    <div class="contact-details-list">
-                        <!-- Email -->
-                        <div class="contact-item reveal-on-scroll">
-                            <div class="contact-item-left">
-                                <div class="contact-item-icon">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-item-info">
-                                    <div class="contact-item-label">Email</div>
-                                    <div class="contact-item-value" id="emailValue">AmirGhavam.dev@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="contact-item-actions">
-                                <button class="contact-action-btn" onclick="copyToClipboard('emailValue', 'Email')" title="Copy email">
-                                    📋
-                                </button>
-                                <a href="mailto:AmirGhavam.dev@gmail.com" class="contact-action-btn" title="Send email">
-                                    📧
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="contact-item reveal-on-scroll">
-                            <div class="contact-item-left">
-                                <div class="contact-item-icon">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-item-info">
-                                    <div class="contact-item-label">Phone</div>
-                                    <div class="contact-item-value" id="phoneValue">+971-5566-94774</div>
-                                </div>
-                            </div>
-                            <div class="contact-item-actions">
-                                <button class="contact-action-btn" onclick="copyToClipboard('phoneValue', 'Phone number')" title="Copy phone">
-                                    📋
-                                </button>
-                                <a href="tel:+97155669774" class="contact-action-btn" title="Call now">
-                                    📞
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Location -->
-                        <div class="contact-item reveal-on-scroll">
-                            <div class="contact-item-left">
-                                <div class="contact-item-icon">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-item-info">
-                                    <div class="contact-item-label">Location</div>
-                                    <div class="contact-item-value" id="locationValue">Dubai, UAE</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Resume Download -->
-                    <div class="resume-section">
-                        <button class="resume-download" onclick="downloadResume()">
-                            <span style="font-size: 1.8rem;">📄</span>
-                            <span>Download Resume</span>
-                        </button>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Amir Ghavam. All rights reserved.</p>
+<section id="hobbies">
+    <div class="container">
+        <div class="section-title">
+            <h2>Hobbies</h2>
+            <p>What I love to do in my free time</p>
         </div>
-    </footer>
+        <div class="hobbies-grid">
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                    </svg>
+                </div>
+                <h3>Chess</h3>
+                <p>Passionate about tech books, sci-fi novels, and staying updated with the latest research papers in AI and data science.</p>
+            </div>
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.58 16.09l-1.09-7.66C20.21 6.46 18.52 5 16.53 5H7.47C5.48 5 3.79 6.46 3.51 8.43l-1.09 7.66C2.2 17.63 3.39 19 4.94 19h0c.68 0 1.32-.27 1.8-.75L9 16h6l2.25 2.25c.48.48 1.13.75 1.8.75h0c1.56 0 2.75-1.37 2.53-2.91zM11 11H9v2H8v-2H6v-1h2V8h1v2h2v1zm4-0.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+                    </svg>
+                </div>
+                <h3>Gaming</h3>
+                <p>Enjoy strategy,puzzles,racing, sport and shooting games, from Clash Royale and COC to COD and NFS and FIFA and so on.</p>
+            </div>
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/>
+                    </svg>
+                </div>
+                <h3>Fitness</h3>
+                <p>Regular workouts, running, and yoga to maintain physical health and mental clarity for optimal productivity.</p>
+            </div>
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </div>
+                <h3>Sudoku</h3>
+                <p>Capturing moments and exploring creative composition, with a special interest in landscape and urban photography.</p>
+            </div>
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                </div>
+                <h3>Music</h3>
+                <p>Listening to diverse genres and exploring music production, from rock and heavymetals to pops and classics!</p>
+            </div>
+            <div class="hobby-card reveal-on-scroll">
+                <div class="hobby-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                </div>
+                <h3>Travel</h3>
+                <p>Exploring new cultures, cuisines, and perspectives while discovering inspiration from different parts of the world.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast"></div>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's collaborate on your next project</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info-card">
+                <div class="contact-info-header">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out through any of these channels. I'm always open to discussing new projects and opportunities and even talking in General.</p>
+                </div>
 
-    <script>
-        // Typing animation
-        const sentences = [
-            "Hi, I'm Amir Ghavam",
-            "I Build Data-Driven Solutions",
-            "I Create Beautiful Web Experiences",
-            "I Transform Data Into Insights",
-            "I Develop Full-Stack Applications"
-        ];
+                <div class="social-links-grid">
+                    <a href="https://github.com/AmirGhavam" target="_blank" title="GitHub" class="reveal-on-scroll">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/AmirGhavam" target="_blank" title="LinkedIn" class="reveal-on-scroll">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/AmirGhavam72" target="_blank" title="Twitter" class="reveal-on-scroll">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/AmirGhavam72" target="_blank" title="Instagram" class="reveal-on-scroll">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div> 
+
+                <div class="contact-details-list">
+                    <div class="contact-item reveal-on-scroll">
+                        <div class="contact-item-left">
+                            <div class="contact-item-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value" id="emailValue">AmirGhavam.dev@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item-actions">
+                            <button class="contact-action-btn" onclick="copyToClipboard('emailValue', 'Email')" title="Copy email">
+                                📋
+                            </button>
+                            <a href="mailto:AmirGhavam.dev@gmail.com" class="contact-action-btn" title="Send email">
+                                📧
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item reveal-on-scroll">
+                        <div class="contact-item-left">
+                            <div class="contact-item-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-value" id="phoneValue">+971-5566-94774</div>
+                            </div>
+                        </div>
+                        <div class="contact-item-actions">
+                            <button class="contact-action-btn" onclick="copyToClipboard('phoneValue', 'Phone number')" title="Copy phone">
+                                📋
+                            </button>
+                            <a href="tel:+97155669774" class="contact-action-btn" title="Call now">
+                                📞
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item reveal-on-scroll">
+                        <div class="contact-item-left">
+                            <div class="contact-item-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-info">
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-value" id="locationValue">Dubai, UAE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <button class="resume-download" onclick="downloadResume()">
+                        <span style="font-size: 1.8rem;">📄</span>
+                        <span>Download Resume</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Amir Ghavam. All rights reserved.</p>
+    </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+    // Typing animation
+    const sentences = [
+        "Hi, I'm Amir Ghavam",
+        "I Build Data-Driven Solutions",
+        "I Create Beautiful Web Experiences",
+        "I Transform Data Into Insights",
+        "I Develop Full-Stack Applications"
+    ];
+    
+    let sentenceIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseTime = 2000;
+    
+    function type() {
+        const typingText = document.getElementById('typingText');
+        const currentSentence = sentences[sentenceIndex];
         
-        let sentenceIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingSpeed = 100;
-        const deletingSpeed = 50;
-        const pauseTime = 2000;
-        
-        function type() {
-            const typingText = document.getElementById('typingText');
-            const currentSentence = sentences[sentenceIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentSentence.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentSentence.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            if (!isDeleting && charIndex === currentSentence.length) {
-                isDeleting = true;
-                setTimeout(type, pauseTime);
-                return;
-            }
-            
-            let minCharIndex = 0;
-            if (sentenceIndex > 0 && currentSentence.startsWith("I ")) {
-                minCharIndex = 2;
-            }
-            
-            if (isDeleting && charIndex === minCharIndex) {
-                isDeleting = false;
-                sentenceIndex = (sentenceIndex + 1) % sentences.length;
-            }
-            
-            const speed = isDeleting ? deletingSpeed : typingSpeed;
-            setTimeout(type, speed);
+        if (isDeleting) {
+            typingText.textContent = currentSentence.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingText.textContent = currentSentence.substring(0, charIndex + 1);
+            charIndex++;
         }
         
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(type, 500);
-        });
-
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+        if (!isDeleting && charIndex === currentSentence.length) {
+            isDeleting = true;
+            setTimeout(type, pauseTime);
+            return;
         }
+        
+        let minCharIndex = 0;
+        if (sentenceIndex > 0 && currentSentence.startsWith("I ")) {
+            minCharIndex = 2;
+        }
+        
+        if (isDeleting && charIndex === minCharIndex) {
+            isDeleting = false;
+            sentenceIndex = (sentenceIndex + 1) % sentences.length;
+        }
+        
+        const speed = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(type, speed);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(type, 500);
+    });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
         });
+    });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        function copyToClipboard(elementId, label) {
-            const element = document.getElementById(elementId);
-            const text = element.textContent;
-            
-            navigator.clipboard.writeText(text).then(() => {
-                showToast(`${label} copied to clipboard! 📋`);
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-            });
-        }
-
-        function downloadResume() {
-            const resumeUrl = '/path/to/your/resume.pdf';
-            
-            const link = document.createElement('a');
-            link.href = resumeUrl;
-            link.download = 'Amir_Ghavam_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            showToast('Resume download started! 📄');
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // ==================== SCROLL REVEAL ANIMATIONS (MOBILE ONLY) ====================
-        function initScrollReveal() {
-            // Only run on mobile
-            if (window.innerWidth > 921) return;
-
-            // Options for first two items trigger
-            const sectionOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -20px 0px'
-            };
-
-            // Options for remaining items (individual reveal)
-            const remainingOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -20px 0px'
-            };
-
-            // Observer for triggering first two items together
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const items = entry.target.querySelectorAll('.reveal-on-scroll');
-                        // Reveal first two items together
-                        if (items.length >= 1) items[0].classList.add('revealed');
-                        if (items.length >= 2) items[1].classList.add('revealed');
-                        
-                        sectionObserver.unobserve(entry.target);
-                    }
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-            }, sectionOptions);
-
-            // Observer for remaining items (3+)
-            const remainingObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                    }
-                });
-            }, remainingOptions);
-
-            // Observe each section
-            document.querySelectorAll('section').forEach(section => {
-                const items = section.querySelectorAll('.reveal-on-scroll');
-                
-                if (items.length > 0) {
-                    // Observe the section to trigger first two items
-                    sectionObserver.observe(section);
-                    
-                    // Observe items starting from the 3rd one individually
-                    items.forEach((item, index) => {
-                        if (index >= 2) {
-                            remainingObserver.observe(item);
-                        }
-                    });
-                }
-            });
-        }
-
-        // Initialize scroll reveal on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            initScrollReveal();
+            }
         });
+    });
 
-        // Reinit on resize if switching to/from mobile
-        let wasMobileView = window.innerWidth <= 921;
-        window.addEventListener('resize', () => {
-            const isMobileNow = window.innerWidth <= 921;
-            if (isMobileNow !== wasMobileView) {
-                wasMobileView = isMobileNow;
-                if (isMobileNow) {
-                    initScrollReveal();
-                } else {
-                    // Remove revealed classes on desktop
-                    document.querySelectorAll('.revealed').forEach(el => {
-                        el.classList.remove('revealed');
-                    });
-                }
+    function copyToClipboard(elementId, label) {
+        const element = document.getElementById(elementId);
+        const text = element.textContent;
+        
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(`${label} copied to clipboard! 📋`);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    }
+
+    function downloadResume() {
+        const resumeUrl = '/path/to/your/resume.pdf';
+        
+        const link = document.createElement('a');
+        link.href = resumeUrl;
+        link.download = 'Amir_Ghavam_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showToast('Resume download started! 📄');
+    }
+
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
             }
         });
 
-        // ==================== CAROUSEL (Desktop only) ====================
-        let currentSlide = 0;
-        let cardsPerView = 3;
-        let totalCards = 0;
-        let realTotalSlides = 0;
-        let isTransitioning = false;
-        let isMobile = false;
-
-        function initCarousel() {
-            const carousel = document.getElementById('projectsCarousel');
-            const originalCards = Array.from(carousel.querySelectorAll('.project-card:not(.clone)'));
-            totalCards = originalCards.length;
-            
-            updateCardsPerView();
-            
-            if (isMobile) {
-                carousel.querySelectorAll('.clone').forEach(clone => clone.remove());
-                return;
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
             }
-            
-            realTotalSlides = Math.ceil(totalCards / cardsPerView);
-            
+        });
+    });
+
+    // Scroll reveal (mobile only)
+    function initScrollReveal() {
+        if (window.innerWidth > 921) return;
+
+        const sectionOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -20px 0px'
+        };
+
+        const remainingOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -20px 0px'
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.reveal-on-scroll');
+                    if (items.length >= 1) items[0].classList.add('revealed');
+                    if (items.length >= 2) items[1].classList.add('revealed');
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, sectionOptions);
+
+        const remainingObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, remainingOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            const items = section.querySelectorAll('.reveal-on-scroll');
+            if (items.length > 0) {
+                sectionObserver.observe(section);
+                items.forEach((item, index) => {
+                    if (index >= 2) {
+                        remainingObserver.observe(item);
+                    }
+                });
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initScrollReveal();
+    });
+
+    let wasMobileView = window.innerWidth <= 921;
+    window.addEventListener('resize', () => {
+        const isMobileNow = window.innerWidth <= 921;
+        if (isMobileNow !== wasMobileView) {
+            wasMobileView = isMobileNow;
+            if (isMobileNow) {
+                initScrollReveal();
+            } else {
+                document.querySelectorAll('.revealed').forEach(el => {
+                    el.classList.remove('revealed');
+                });
+            }
+        }
+    });
+
+    // Projects carousel (desktop)
+    let currentSlide = 0;
+    let cardsPerView = 3;
+    let totalCards = 0;
+    let realTotalSlides = 0;
+    let isTransitioning = false;
+    let isMobile = false;
+
+    function initCarousel() {
+        const carousel = document.getElementById('projectsCarousel');
+        if (!carousel) return;
+
+        const originalCards = Array.from(carousel.querySelectorAll('.project-card:not(.clone)'));
+        totalCards = originalCards.length;
+        
+        updateCardsPerView();
+        
+        if (isMobile) {
             carousel.querySelectorAll('.clone').forEach(clone => clone.remove());
-            
-            const cleanCards = Array.from(carousel.querySelectorAll('.project-card'));
-            
-            for (let i = 0; i < cardsPerView; i++) {
-                const clone = cleanCards[i].cloneNode(true);
-                clone.classList.add('clone');
-                carousel.appendChild(clone);
-            }
-            
-            for (let i = cleanCards.length - cardsPerView; i < cleanCards.length; i++) {
-                const clone = cleanCards[i].cloneNode(true);
-                clone.classList.add('clone');
-                carousel.insertBefore(clone, carousel.firstChild);
-            }
-            
-            currentSlide = 1;
-            
-            createIndicators();
-            updateCarousel(false);
+            return;
         }
-
-        function updateCardsPerView() {
-            const wasMobile = isMobile;
-            
-            if (window.innerWidth <= 921) {
-                cardsPerView = 1;
-                isMobile = true;
-            } else if (window.innerWidth <= 1400) {
-                cardsPerView = 2;
-                isMobile = false;
-            } else {
-                cardsPerView = 3;
-                isMobile = false;
-            }
-            
-            if (wasMobile !== isMobile) {
-                const carousel = document.getElementById('projectsCarousel');
-                carousel.querySelectorAll('.clone').forEach(clone => clone.remove());
-                carousel.style.transform = 'none';
-            }
+        
+        realTotalSlides = Math.ceil(totalCards / cardsPerView);
+        
+        carousel.querySelectorAll('.clone').forEach(clone => clone.remove());
+        
+        const cleanCards = Array.from(carousel.querySelectorAll('.project-card'));
+        
+        for (let i = 0; i < cardsPerView; i++) {
+            const clone = cleanCards[i].cloneNode(true);
+            clone.classList.add('clone');
+            carousel.appendChild(clone);
         }
-
-        function createIndicators() {
-            if (isMobile) return;
-            
-            const indicatorsContainer = document.getElementById('carouselIndicators');
-            indicatorsContainer.innerHTML = '';
-            
-            for (let i = 0; i < realTotalSlides; i++) {
-                const indicator = document.createElement('div');
-                indicator.className = 'carousel-indicator';
-                if (i === 0) indicator.classList.add('active');
-                indicator.onclick = () => goToSlide(i + 1);
-                indicatorsContainer.appendChild(indicator);
-            }
+        
+        for (let i = cleanCards.length - cardsPerView; i < cleanCards.length; i++) {
+            const clone = cleanCards[i].cloneNode(true);
+            clone.classList.add('clone');
+            carousel.insertBefore(clone, carousel.firstChild);
         }
+        
+        currentSlide = 1;
+        
+        createIndicators();
+        updateCarousel(false);
+    }
 
-        function moveCarousel(direction) {
-            if (isTransitioning || isMobile) return;
-            
-            currentSlide += direction;
-            updateCarousel(true);
-            
-            setTimeout(() => {
-                if (currentSlide > realTotalSlides) {
-                    isTransitioning = true;
-                    currentSlide = 1;
-                    updateCarousel(false);
-                    setTimeout(() => {
-                        isTransitioning = false;
-                    }, 50);
-                }
-                
-                if (currentSlide < 1) {
-                    isTransitioning = true;
-                    currentSlide = realTotalSlides;
-                    updateCarousel(false);
-                    setTimeout(() => {
-                        isTransitioning = false;
-                    }, 50);
-                }
-            }, 500);
+    function updateCardsPerView() {
+        const wasMobile = isMobile;
+        
+        if (window.innerWidth <= 921) {
+            cardsPerView = 1;
+            isMobile = true;
+        } else if (window.innerWidth <= 1400) {
+            cardsPerView = 2;
+            isMobile = false;
+        } else {
+            cardsPerView = 3;
+            isMobile = false;
         }
-
-        function goToSlide(slideIndex) {
-            if (isTransitioning || isMobile) return;
-            currentSlide = slideIndex;
-            updateCarousel(true);
-        }
-
-        function updateCarousel(animate = true) {
-            if (isMobile) return;
-            
+        
+        if (wasMobile !== isMobile) {
             const carousel = document.getElementById('projectsCarousel');
-            const indicators = document.querySelectorAll('.carousel-indicator');
-            
-            const carouselStyle = window.getComputedStyle(carousel);
-            const gap = parseFloat(carouselStyle.gap) || 24;
-            
-            const firstCard = carousel.querySelector('.project-card');
-            if (!firstCard) return;
-            
-            const cardWidth = firstCard.offsetWidth;
-            const slideDistance = (cardWidth + gap) * cardsPerView;
-            const translateX = -(currentSlide * slideDistance);
-            
-            if (!animate) {
-                carousel.style.transition = 'none';
-            } else {
-                carousel.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-            }
-            
-            carousel.style.transform = `translateX(${translateX}px)`;
-            
-            if (!animate) {
-                carousel.offsetHeight;
+            if (!carousel) return;
+            carousel.querySelectorAll('.clone').forEach(clone => clone.remove());
+            carousel.style.transform = 'none';
+        }
+    }
+
+    function createIndicators() {
+        if (isMobile) return;
+        
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        if (!indicatorsContainer) return;
+
+        indicatorsContainer.innerHTML = '';
+        
+        for (let i = 0; i < realTotalSlides; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'carousel-indicator';
+            if (i === 0) indicator.classList.add('active');
+            indicator.onclick = () => goToSlide(i + 1);
+            indicatorsContainer.appendChild(indicator);
+        }
+    }
+
+    function moveCarousel(direction) {
+        if (isTransitioning || isMobile) return;
+        
+        currentSlide += direction;
+        updateCarousel(true);
+        
+        setTimeout(() => {
+            if (currentSlide > realTotalSlides) {
+                isTransitioning = true;
+                currentSlide = 1;
+                updateCarousel(false);
                 setTimeout(() => {
-                    carousel.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                    isTransitioning = false;
                 }, 50);
             }
             
-            let realSlideIndex = currentSlide - 1;
-            if (realSlideIndex < 0) realSlideIndex = realTotalSlides - 1;
-            if (realSlideIndex >= realTotalSlides) realSlideIndex = 0;
-            
-            indicators.forEach((indicator, index) => {
-                if (index === realSlideIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
+            if (currentSlide < 1) {
+                isTransitioning = true;
+                currentSlide = realTotalSlides;
+                updateCarousel(false);
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 50);
+            }
+        }, 500);
+    }
+
+    function goToSlide(slideIndex) {
+        if (isTransitioning || isMobile) return;
+        currentSlide = slideIndex;
+        updateCarousel(true);
+    }
+
+    function updateCarousel(animate = true) {
+        if (isMobile) return;
+        
+        const carousel = document.getElementById('projectsCarousel');
+        if (!carousel) return;
+
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        
+        const carouselStyle = window.getComputedStyle(carousel);
+        const gap = parseFloat(carouselStyle.gap) || 24;
+        
+        const firstCard = carousel.querySelector('.project-card');
+        if (!firstCard) return;
+        
+        const cardWidth = firstCard.offsetWidth;
+        const slideDistance = (cardWidth + gap) * cardsPerView;
+        const translateX = -(currentSlide * slideDistance);
+        
+        if (!animate) {
+            carousel.style.transition = 'none';
+        } else {
+            carousel.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
+        
+        carousel.style.transform = `translateX(${translateX}px)`;
+        
+        if (!animate) {
+            carousel.offsetHeight;
             setTimeout(() => {
-                initCarousel();
-            }, 100);
+                carousel.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            }, 50);
+        }
+        
+        let realSlideIndex = currentSlide - 1;
+        if (realSlideIndex < 0) realSlideIndex = realTotalSlides - 1;
+        if (realSlideIndex >= realTotalSlides) realSlideIndex = 0;
+        
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === realSlideIndex);
         });
+    }
 
-        window.addEventListener('resize', () => {
-            const previousCardsPerView = cardsPerView;
-            const previousIsMobile = isMobile;
-            updateCardsPerView();
-            
-            if (previousIsMobile !== isMobile || previousCardsPerView !== cardsPerView) {
-                initCarousel();
-            }
-        });
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            initCarousel();
+        }, 100);
+    });
 
-        document.addEventListener('keydown', (e) => {
-            if (isMobile) return;
-            
-            if (e.key === 'ArrowLeft') {
-                moveCarousel(-1);
-            } else if (e.key === 'ArrowRight') {
-                moveCarousel(1);
-            }
+    window.addEventListener('resize', () => {
+        const previousCardsPerView = cardsPerView;
+        const previousIsMobile = isMobile;
+        updateCardsPerView();
+        
+        if (previousIsMobile !== isMobile || previousCardsPerView !== cardsPerView) {
+            initCarousel();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (isMobile) return;
+        
+        if (e.key === 'ArrowLeft') {
+            moveCarousel(-1);
+        } else if (e.key === 'ArrowRight') {
+            moveCarousel(1);
+        }
+    });
+
+    // NOTES TREE TOGGLING (simple, robust, all collapsed by default)
+    function initNotesTree() {
+        const folderNodes = document.querySelectorAll('.notes-node.folder');
+
+        folderNodes.forEach(li => {
+            const main = li.querySelector(':scope > .notes-node-main');
+            if (!main) return;
+
+            main.addEventListener('click', (e) => {
+                // Ignore clicks on file links
+                if (e.target.closest('a')) return;
+                li.classList.toggle('expanded');
+            });
         });
-    </script>
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initNotesTree();
+    });
+</script>
 </body>
 </html>
